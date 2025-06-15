@@ -215,7 +215,6 @@ const LabReportTracker = () => {
                       value={formData.unit}
                       onChange={(e) => setFormData(prev => ({ ...prev, unit: e.target.value }))}
                       className="lab-tracker-input"
-                      placeholder="Optional"
                     />
                   </div>
                 </div>

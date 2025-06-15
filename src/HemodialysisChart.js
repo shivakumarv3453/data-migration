@@ -228,7 +228,7 @@ export default function HemodialysisChart() {
         style={{ marginBottom: "1rem" }}
         onClick={() => navigate("/lab-report")}
       >
-        ➕ Add Table Data
+        ➕ Add Data
       </button>
       <form onSubmit={handleSubmit}>
         {/* Patient Information */}
