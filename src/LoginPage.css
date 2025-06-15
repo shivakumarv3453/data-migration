@@ -1,0 +1,152 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background: var(--glass-bg);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12), inset 0 0 0 0.5px rgba(255,255,255,0.4);
+  backdrop-filter: saturate(180%) blur(26px);
+  -webkit-backdrop-filter: saturate(180%) blur(26px);
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.login-form h3 {
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border-radius: 12px; /* More rounded */
+  background: var(--glass-bg-heavy);
+  color: var(--text-dark);
+  border: 1px solid var(--glass-border);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group select option {
+  background: #333; /* Dark background for dropdown options */
+  color: #fff;
+}
+
+.form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: rgba(0, 122, 255, 0.8); /* Apple's blue for focus */
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.2);
+}
+
+.pin-input {
+  text-align: center;
+  letter-spacing: 1.5em; /* Spreads out the PIN dots */
+}
+
+.error-message,
+.success-message {
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.error-message {
+  background-color: rgba(255, 69, 58, 0.8); /* iOS red */
+}
+
+.success-message {
+  background-color: rgba(52, 199, 89, 0.8); /* iOS green */
+}
+
+.login-btn,
+.add-user-btn,
+.back-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.login-btn, .add-user-btn {
+  background-color: var(--focus-blue);
+  color: white;
+}
+
+.login-btn:hover, .add-user-btn:hover {
+  background-color: #005ecb; /* Darker blue on hover */
+}
+
+.back-btn {
+  background: var(--glass-bg);
+  color: var(--text-dark);
+  border: 1px solid var(--glass-border);
+}
+
+.back-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+@media (max-width: 500px) {
+  .login-form {
+    padding: 20px 8px 18px 8px;
+    max-width: 98vw;
+  }
+}

@@ -1,0 +1,399 @@
+/* LabReportTracker.css */
+
+.lab-tracker-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+  padding: 1rem;
+}
+
+.lab-tracker-main {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.lab-tracker-header {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lab-tracker-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lab-tracker-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.lab-tracker-subtitle {
+  color: #6b7280;
+}
+
+.lab-tracker-add-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.lab-tracker-add-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Modal Styles */
+.lab-tracker-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.lab-tracker-modal {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.lab-tracker-modal-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.lab-tracker-form-group {
+  margin-bottom: 1rem;
+}
+
+.lab-tracker-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.lab-tracker-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.lab-tracker-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.lab-tracker-input:focus {
+  outline: none;
+  ring: 2px solid #3b82f6;
+  border-color: transparent;
+}
+
+.lab-tracker-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+.lab-tracker-textarea:focus {
+  outline: none;
+  ring: 2px solid #3b82f6;
+  border-color: transparent;
+}
+
+/* Dropdown Styles */
+.lab-tracker-dropdown-container {
+  position: relative;
+}
+
+.lab-tracker-search-input {
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.lab-tracker-search-input:focus {
+  outline: none;
+  ring: 2px solid #3b82f6;
+  border-color: transparent;
+}
+
+.lab-tracker-search-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  color: #9ca3af;
+}
+
+.lab-tracker-dropdown {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+  max-height: 12rem;
+  overflow-y: auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.lab-tracker-dropdown-item {
+  padding: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.lab-tracker-dropdown-item:hover {
+  background-color: #eff6ff;
+}
+
+.lab-tracker-dropdown-param {
+  font-weight: 500;
+}
+
+.lab-tracker-dropdown-unit {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Button Styles */
+.lab-tracker-btn-group {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 1rem;
+}
+
+.lab-tracker-btn-primary {
+  flex: 1;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.lab-tracker-btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.lab-tracker-btn-secondary {
+  flex: 1;
+  background-color: #d1d5db;
+  color: #374151;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.lab-tracker-btn-secondary:hover {
+  background-color: #9ca3af;
+}
+
+/* Entries List Styles */
+.lab-tracker-entries {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.lab-tracker-entries-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lab-tracker-entries-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.lab-tracker-entries-subtitle {
+  color: #6b7280;
+}
+
+.lab-tracker-empty-state {
+  padding: 3rem;
+  text-align: center;
+}
+
+.lab-tracker-empty-icon {
+  margin: 0 auto 1rem;
+  color: #9ca3af;
+}
+
+.lab-tracker-empty-title {
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+.lab-tracker-empty-subtitle {
+  color: #9ca3af;
+}
+
+/* Table Styles */
+.lab-tracker-table-container {
+  overflow-x: auto;
+}
+
+.lab-tracker-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lab-tracker-table-header {
+  background-color: #f9fafb;
+}
+
+.lab-tracker-table-header th {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lab-tracker-table-body {
+  background: white;
+}
+
+.lab-tracker-table-row {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+.lab-tracker-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.lab-tracker-table-cell {
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.lab-tracker-table-cell-parameter {
+  font-weight: 500;
+  color: #111827;
+}
+
+.lab-tracker-table-cell-value {
+  color: #111827;
+}
+
+.lab-tracker-table-cell-date {
+  color: #6b7280;
+}
+
+.lab-tracker-table-cell-notes {
+  color: #6b7280;
+  max-width: 12rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lab-tracker-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.lab-tracker-back-btn {
+  background: transparent;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.lab-tracker-back-btn:hover {
+  text-decoration: underline;
+}
+
+
+.lab-tracker-action-btn {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lab-tracker-edit-btn {
+  color: #2563eb;
+}
+
+.lab-tracker-edit-btn:hover {
+  color: #1d4ed8;
+}
+
+.lab-tracker-delete-btn {
+  color: #dc2626;
+}
+
+.lab-tracker-delete-btn:hover {
+  color: #991b1b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-tracker-header-content {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .lab-tracker-form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .lab-tracker-btn-group {
+    flex-direction: column;
+  }
+}

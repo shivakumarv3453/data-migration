@@ -1,0 +1,250 @@
+/* Paste the entire CSS from your HTML <style> section here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+.hospital-logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+.form-content {
+    padding: 30px;
+    background: var(--glass-bg);
+    color: var(--text-dark);
+    border-radius: 20px;
+    backdrop-filter: saturate(180%) blur(26px);
+    -webkit-backdrop-filter: saturate(180%) blur(26px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12), inset 0 0 0 0.5px rgba(255,255,255,0.4);
+}
+.patient-info,
+.weight-section,
+.dialysis-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 22px;
+    margin-bottom: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--glass-input-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--glass-border);
+    font-size: 0.95rem;
+}
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: rgba(0, 122, 255, 0.8);
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.2);
+}
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-dark);
+}
+.weight-section,
+.dialysis-section,
+.vitals-section {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+.monitoring-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background: var(--glass-bg-heavy);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.monitoring-table th {
+    background: var(--glass-bg);
+    padding: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.monitoring-table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-dark);
+}
+.monitoring-table tr:last-child td {
+    border-bottom: none;
+}
+.monitoring-table input {
+    width: 95%;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: #f5f5f7;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.monitoring-table input:focus {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 122, 255, 0.8);
+    outline: none;
+}
+.add-row-btn,
+.save-btn,
+.add-table-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+.add-row-btn {
+    background: var(--glass-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--glass-border);
+}
+.add-row-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.save-btn, .add-table-btn {
+    background-color: #007aff;
+}
+.save-btn:hover, .add-table-btn:hover {
+    background-color: #005ecb;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #007aff;
+}
+.time-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+@media (max-width: 768px) {
+    .patient-info {
+        grid-template-columns: 1fr;
+    }
+    .weight-section, .dialysis-section, .vitals-section {
+        grid-template-columns: 1fr;
+    }
+    .monitoring-table {
+        font-size: 0.8em;
+    }
+    .form-content {
+        padding: 15px;
+    }
+}
+.success-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(40, 167, 69, 0.7);
+    color: white;
+    font-weight: 600;
+}
+.page-back{
+  width:auto!important;
+  display:inline-flex!important;
+}
+.checkbox-group.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.checkbox-group.vertical .checkbox-item {
+  width: 100%;
+}
+
+/* glass card applied to all main form sections */
+.weight-section,
+.dialysis-section,
+.vitals-section,
+.checkbox-group.vertical {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1), inset 0 0 0 0.5px rgba(255,255,255,0.35);
+}
+
+/* distinct border for Weight Management inputs */
+.weight-section .form-group input,
+.weight-section .form-group select {
+  border: 1px solid var(--focus-blue);
+}
+
+/* distinct border for Dialysis Details inputs */
+.dialysis-section .form-group input,
+.dialysis-section .form-group select {
+  border: 1px solid var(--focus-blue);
+}
+
+/* distinct border for Vital Signs inputs (monitoring table) */
+.monitoring-table input {
+  border: 1px solid var(--focus-blue);
+  color: var(--text-dark) !important;
+}
